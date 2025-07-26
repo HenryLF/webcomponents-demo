@@ -1,0 +1,58 @@
+@utility color-* {
+  background-color: --value(--color- *) !important;
+  &:where(.dark, .dark *) {
+    background-color: --value(--color-dark- *) !important;
+  }
+}
+
+@utility -color-* {
+  background-color: --value(--color-dark- *);
+  &:where(.dark, .dark *) {
+    background-color: --value(--color- *);
+  }
+}
+
+@utility text-color-* {
+  @apply transition-[color] duration-400 ease-in;
+  color: --value(--color- *);
+  &:where(.dark, .dark *) {
+    color: --value(--color-dark- *);
+  }
+}
+
+@utility -text-color-* {
+  @apply transition-[color] duration-400 ease-in;
+  color: --value(--color-dark- *);
+  &:where(.dark, .dark *) {
+    color: --value(--color- *);
+  }
+}
+
+@utility border-color-* {
+  @apply transition-[border-color] duration-400 ease-in;
+  border-color: --value(--color- *);
+  &:where(.dark, .dark *) {
+    border-color: --value(--color-dark- *);
+  }
+}
+
+@utility -border-color-* {
+  @apply transition-[border-color] duration-400 ease-in;
+  border-color: --value(--color-dark *);
+  &:where(.dark, .dark *) {
+    border-color: --value(--color- *);
+  }
+}
+@utility shadow-color-* {
+  --tw-shadow-color: --value(--color- *);
+  &:where(.dark, .dark *) {
+    --tw-shadow-color: --value(--color-dark- *);
+  }
+}
+
+@utility -shadow-color-* {
+  --tw-shadow-color: --value(--color-dark- *);
+  &:where(.dark, .dark *) {
+    --tw-shadow-color: --value(--color- *);
+  }
+}

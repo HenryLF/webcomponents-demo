@@ -1,0 +1,46 @@
+@import "tailwindcss";
+@import "./utilities.css";
+
+@theme {
+  --color-dark-main: #ffffff;
+  --color-main: #000000;
+  --color-background: #ffffff;
+  --color-dark-background: #000000;
+  --color-contrast: #000000;
+  --color-dark-contrast: #ffffff;
+
+  --spacing-small: clamp(5px, 1.5vw, 80px);
+  --spacing-main: clamp(15px, 3vw, 150px);
+  --spacing-large: clamp(50px, 6vw, 500px);
+  --spacing-icon: clamp(20px, 1.5vw, 200px);
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+html {
+  all: unset;
+  @apply -text-color-main;
+}
+
+body {
+  @apply color-background font-mono text-color-main;
+}
+
+section {
+  @apply shadow;
+}
+
+.button {
+  @apply -border-color-background border-1 rounded;
+  @apply p-2 shadow -shadow-color-background -text-color-background;
+}
+
+h1 {
+  @apply text-2xl;
+}
+.code {
+  white-space: pre;
+  font-family: monospace;
+  line-break: loose;
+  padding: 2px 4px;
+  border-radius: 4px;
+}

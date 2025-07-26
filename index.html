@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="index.js" type="module"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body x-data="data" :class="$store.darkMode.on && 'dark'">
+    <darkmode-btn></darkmode-btn>
+    <h1>Web Component Demo</h1>
+    <html-viewer>
+      <button class="button" @click="count++" slot="content">
+        I've been clicked <span x-text="count">X</span> times.
+      </button>
+    </html-viewer>
+  </body>
+</html>

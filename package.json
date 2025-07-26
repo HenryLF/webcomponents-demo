@@ -1,0 +1,22 @@
+{
+  "name": "alpinewc-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently 'npm:dev:*'",
+    "dev:ts": "node build.mjs",
+    "dev:css": "tailwindcss -i global.css -o style.css --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "alpinejs": "^3.14.9",
+    "concurrently": "^9.2.0",
+    "esbuild": "^0.25.8",
+    "tailwindcss": "^4.1.11"
+  },
+  "devDependencies": {
+    "@types/alpinejs": "^3.13.11"
+  }
+}
